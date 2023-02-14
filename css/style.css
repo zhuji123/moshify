@@ -7,6 +7,8 @@
     --color-body: #918ca4;
 }
 
+/* Typography */
+
 html {
     /* The default font-size is 16px */
     font-size: 62.5%;
@@ -53,8 +55,41 @@ p{
     h2 {
         font-size: 4rem;
     }
-    
+
     h3 {
         font-size: 2.4rem;
+    }
+}
+
+/* Links */
+a {
+    /* erase the underline of every links */
+    text-decoration: none;
+}
+
+.link-arrow {
+    color: var(--color-accent);
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Psudo selector to add a real arrow -->/ or we can add an icon */
+.link-arrow::after {
+    content: '-->';
+    margin-left: 5px;
+    /* the property here we want to change is margin */
+    transition: margin 0.15s;
+}
+
+/* target the element .link-arrow::after in the hover state */
+.link-arrow:hover::after {
+    margin-left: 10px;
+
+}
+
+@media screen and (min-width: 1024px) {
+    .link-arrow {
+        font-size: 1.5rem;
     }
 }
