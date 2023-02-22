@@ -818,28 +818,33 @@ a {
 
 }
 
-/* Features Block */
+/* Features */
 .feature {
-    /* 4rem for rows and 2rem for coloums */
     gap: 4rem 2rem;
+    margin: 12rem 0;
+  }
 
-}
 
-.feature__heading {
+  
+  .feature:first-of-type {
+    margin-top: 6rem;
+  }
+  
+  .feature__heading {
     margin: 1rem 0;
-}
-
-.feature__image {
+  }
+  
+  .feature__image {
     width: 100%;
-}
+  }
+  
 
-@media screen and (min-width:768px) {
-
-    
-    /* 将偶数个的feature的featrue__content设置为第二个位置，这样的话img就会跑到第一个位置里 */
+  /* 这里出现bug，第偶数个feature内的feature__content 没能翻转顺序 */
+  /* 推测原因是body段没有将feature列成兄弟节点 */
+  /* 最终将所有feature都放在一个section里面，解决了bug */
+  @media screen and (min-width: 768px) {
     .feature:nth-of-type(even) .feature__content {
-        order: 2;
+      order: 2;
     }
-
-    
-}
+  }
+  
