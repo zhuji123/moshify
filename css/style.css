@@ -618,16 +618,26 @@ a {
         margin: 0 2rem;
     }
 }
+
 /* Collapsibles */
+
+
 .collapsible__header {
     display: flex;
     /* This will put elements inside the container to the edges of container and add space between them */
     justify-content: space-between;
 }
 
+
 .collapsible__heading {
     margin-top: 0;
     font-size: 3rem;
+
+    letter-spacing: 1px;
+}
+
+.block--dark .collapsible__heading{
+    color: white;
 }
 
 .collapsible__chevron {
@@ -641,6 +651,11 @@ a {
     overflow: hidden;
     opacity: 0;
     transition: max-height 0.3s, opacity .3s;
+   
+}
+
+.collapsible__content .list li {
+        margin-bottom: 1.3rem;
 }
 
 .collapsible--expanded .collapsible__chevron{
@@ -872,5 +887,84 @@ a {
     .block-showcase__image > img {
         width: auto;
         max-width: 700px;
+    }
+  }
+
+
+  /* Footer */
+  .footer {
+    background: #232323;
+  }
+
+  .footer a {
+    color: #777;
+    transition: color .3s;
+  }
+
+  .footer a:hover {
+    color: #fff;
+  }
+
+  .footer__section {
+    padding: 2rem;
+    border-bottom: 1px solid #393939;
+  }
+
+  .footer__section .list {
+    margin: 0;
+  }
+
+  .footer__heading {
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .footer__brand {
+    margin-top: 5rem;
+    text-align: center;
+  }
+
+  .footer__brand img {
+    /* TODO: Consider refractoring this applying it to all images */
+    /* 设置img的width为1005意味着它会随着屏幕大小变化 */
+    width: 100%;
+    max-width: 230px;
+  }
+
+  .footer__copyright {
+    font-size: 2.1rem;
+    color: #fff;
+    opacity: .3;
+  }
+
+  @media screen and (min-width:768px) {
+    .footer__sections {
+        grid-template-columns: repeat(auto-fit,minmax(10rem,1fr));
+    }
+
+    .footer .collapsible__chevron {
+        display: none;
+    }
+
+    .footer .collapsible__content {
+        opacity: 1;
+        max-height: 100%;
+    }
+
+    .footer__brand {
+        order: -1;
+        margin-top: 1rem;
+    }
+
+    .footer__copyright {
+        font-size: 1.5ren;
+    }
+    
+    .footer__section {
+        border: 0;
+    }
+
+    .footer__heading {
+        font-size: 1.6rem;
     }
   }
