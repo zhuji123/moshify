@@ -640,7 +640,12 @@ a {
     letter-spacing: 1px;
 }
 
-.block--dark .collapsible__heading{
+.block--dark h1,
+.block--dark h2,
+.block--dark h3,
+.block--dark h4,
+.block--dark h5,
+.block--dark h6{
     color: white;
 }
 
@@ -811,7 +816,7 @@ a {
     box-shadow: 0 0 30px 20px #e6ebee;
     border: 0;
     margin: 4rem auto;
-    max-width: 670;
+    max-width: 670px;
 }
 
 .block-domain__prices {
@@ -963,7 +968,7 @@ a {
     }
 
     .footer__copyright {
-        font-size: 1.5ren;
+        font-size: 1.5rem;
     }
     
     .footer__section {
