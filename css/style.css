@@ -154,6 +154,7 @@ a {
     /* To get rid of the default bullet points */
     list-style: none;
     padding-left: 0;
+
     
 
 }
@@ -226,7 +227,8 @@ a {
     cursor: pointer;
     font-size: 1.8rem;
     font-weight: 600;
-    padding: 2rem 3rem;
+    /* This set the btn horizontal padding to 4% of viewport width, which can changes when the screen width changes */
+    padding: 2rem 4vw;
     text-transform: uppercase;
     white-space: nowrap;
     text-align: center;
@@ -323,6 +325,8 @@ a {
     border: 0;
     flex-grow: 1;
     padding: 1.5rem 2rem;
+    /* This is to solve a bug that the input filed border stretch too long when it comes to small screen(300px width) */
+    width: 0;
 }
 
 .input-group .btn {
@@ -812,7 +816,7 @@ a {
 
 .block-domain__prices {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(2,1fr);
     /* Seting the height of each row */
     grid-template-rows: repeat(2, 6rem);
     font-size: 2rem;
@@ -820,6 +824,7 @@ a {
     justify-items: center;
     max-width: 700px;
     margin: 0 auto;
+    color: var(--color-headings);
 }
 
 @media screen and (min-width:768px){
@@ -830,6 +835,7 @@ a {
 
 /* Plans Block */
 .block-plans .grid {
+
    gap: 8rem 4rem;
 
 }
